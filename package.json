@@ -1,0 +1,26 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "implementing promise object available in JS",
+  "main": "promiseJS.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mokshchadha/promisejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mokshchadha/promisejs/issues"
+  },
+  "homepage": "https://github.com/mokshchadha/promisejs#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^28.1.2"
+  }
+}
