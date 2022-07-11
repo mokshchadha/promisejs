@@ -7,7 +7,7 @@ const MyPromise = function (cb) {
   this._value;
 
   try {
-    this._onSuccess = this._onSuccess.bind(this);
+    this._onSuccess = this._onSuccess.bind(this); // this binding is required so that while chaining the this remains same
     this._onFail = this._onFail.bind(this);
     cb(this._onSuccess, this._onFail);
   } catch (error) {
@@ -25,14 +25,6 @@ MyPromise.prototype._onFail = function (value) {
   if (this._state !== STATE.PENDING) return;
   this._value = value;
   this._state = STATE.REJECTED;
-};
-
-MyPromise.prototype._onSuccessBindForChaining = function () {
-  return this._onSuccess.bind(this);
-};
-
-MyPromise.prototype._onFailBindForChaining = function () {
-  return this._onFail.bind(this);
 };
 
 MyPromise.prototype.then = function (callBack, catchCallBack) {
